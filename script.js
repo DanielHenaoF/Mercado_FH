@@ -1,5 +1,5 @@
 class Aviones {
-  tipo = "Privado";
+  tipo = "Comercial";
   marca = "Embraer";
   modelo = "E-195";
 
@@ -43,7 +43,7 @@ class Jet extends Aviones {
   }
 }
 
-const jet = new Jet("Comercial", "Embraers", "2000", "1000");
+const jet = new Jet("Privado", "Embraer", "E-170", "1000");
 jet.CapacidadMax();
 jet.AlturaVuelo();
 
@@ -66,7 +66,7 @@ class Militar extends Aviones {
   }
 }
 
-const militar = new Militar("Guerra", "Ruso", "1980", "ametralladora");
+const militar = new Militar("Ataque", "Trunderbolt II", "A-10", "Misiles");
 militar.Municiones();
 
 class Presidencial extends Aviones {
@@ -88,10 +88,5 @@ class Presidencial extends Aviones {
   }
 }
 
-const presidencial = new Presidencial(
-  "Politico",
-  "Nacional",
-  "1982",
-  "Satelital"
-);
+const presidencial = new Presidencial("Politico", "Boeing", "767", "Satelital");
 presidencial.Gps();
