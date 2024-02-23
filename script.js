@@ -5,13 +5,13 @@ class Aviones {
 
   EstadoMantenimiento() {
     console.log(
-      "El avion " + this.tipo + " ya tiene los mantenimientos al día."
+      "El avión de tipo " +
+        this.tipo +
+        " tiene un estado de mantenimiento al día."
     );
-    return "El avion " + this.tipo + " ya tiene los mantenimientos al día.";
   }
   AlturaVuelo() {
-    console.log("El avion " + this.tipo + " vuela a altura media.");
-    return "El avion " + this.tipo + " vuela a altura media.";
+    console.log("El avión de tipo " + this.tipo + " vuela a altura media.");
   }
 }
 
@@ -29,7 +29,7 @@ class Jet extends Aviones {
   }
   CapacidadMax() {
     console.log(
-      "El avión " +
+      "El avión de tipo " +
         this.tipo +
         " de marca " +
         this.marca +
@@ -37,20 +37,9 @@ class Jet extends Aviones {
         this.capacidad +
         " pasajeros."
     );
-    return (
-      "El avión " +
-      this.tipo +
-      " de marca " +
-      this.marca +
-      " tiene capacidad para " +
-      this.capacidad +
-      " pasajeros."
-    );
   }
-
   AlturaVuelo() {
-    console.log("El avion " + this.tipo + " vuela a altura superior.");
-    return "El avion " + this.tipo + " vuela a altura superior.";
+    console.log("El avión de tipo " + this.tipo + " vuela a altura superior.");
   }
 }
 
@@ -70,19 +59,14 @@ class Militar extends Aviones {
     console.log(
       "El avión de modelo " +
         this.modelo +
-        " esta equipado con municiones para " +
-        this.armamento
-    );
-    return (
-      "El avión de modelo " +
-      this.modelo +
-      " esta equipado con municiones para " +
-      this.armamento
+        " está equipado con municiones para " +
+        this.armamento +
+        "."
     );
   }
 }
 
-const militar = new Militar("Guerra", "Ruso", "1980", "metralladora");
+const militar = new Militar("Guerra", "Ruso", "1980", "ametralladora");
 militar.Municiones();
 
 class Presidencial extends Aviones {
@@ -95,18 +79,11 @@ class Presidencial extends Aviones {
   }
   Gps() {
     console.log(
-      "El avion presidencial marca " +
+      "El avión presidencial marca " +
         this.modelo +
         " cuenta con monitoreo " +
         this.seguridad +
         " gracias a su GPS."
-    );
-    return (
-      "El avion presidencial marca " +
-      this.modelo +
-      " cuenta con monitoreo " +
-      this.seguridad +
-      " gracias a su GPS."
     );
   }
 }
